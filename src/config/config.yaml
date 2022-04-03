@@ -1,0 +1,14 @@
+server:
+    env: dev
+    host: "0.0.0.0"
+    port: "80"
+    apipath: "/videos"
+aws:
+    s3bucket: "movies-videos-1675"
+    cdnlink: "https://d2m5wuux0eh0h0.cloudfront.net"
+database:
+    database: "videodatabase"
+    user: "postgres"
+    password: "padma1675"
+    host: "127.0.0.1"
+    port: "5432"
