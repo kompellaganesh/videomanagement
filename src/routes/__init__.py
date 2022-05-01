@@ -3,10 +3,14 @@ from config.config import  configurations
 from routes.uploadvideo_handler import uploadvideo
 from flasgger import Swagger
 from routes.listvideo_handler import listvideos
- 
+from routes.streamvideo_handler import streamvideo
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
+
 app.add_url_rule(configurations['server']['apipath']+"/api/v1/uploadvideo","uploadvideo",uploadvideo,methods=['POST'])  
 app.add_url_rule(configurations['server']['apipath']+"/api/v1/listvideos","listvideos",listvideos)  
+app.add_url_rule(configurations['server']['apipath']+"/api/v1/streamvideo","streamvideo",streamvideo)  
 swagger_config = {
     "headers": [
     ],
